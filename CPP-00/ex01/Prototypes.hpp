@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstring>
+#include <limits>
+#include <cstdlib>
 #include "Classes.hpp"
 
-void add(void);
+void add(int i, PhoneBook& repertoire);

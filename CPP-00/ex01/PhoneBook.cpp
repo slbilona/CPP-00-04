@@ -11,7 +11,7 @@ int main ()
 		std::cout << "Entree possible :\n" << explications << "Que souhaitez vous faire ?" << std::endl;
 		std::cin >> str;
 		if (str == "ADD")
-			add();
+			add(i, repertoire);
 		else if (str == "SEARCH")
 		{
 
@@ -24,6 +24,7 @@ int main ()
 		{
 			std::cout << "Entree non valable.\n";
 		}
+		std::cout << "nouveau contact : " << repertoire.contacts[i].Prenom << std::endl;
 		std::cout << "\n-------------------------------------------------------------------------------------------\n\n";
 		i++;
 		if (i == 8)
