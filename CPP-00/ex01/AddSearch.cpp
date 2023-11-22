@@ -1,6 +1,9 @@
 #include "Prototypes.hpp"
 
-void add(void)
+void add(int i)
 {
-    std::cout << "hey\n";
+    PhoneBook repertoire;
+    Contact contact = repertoire.contacts[i];
+    std::cout << "Quel est le prénom du contact ?\n";
+    std::cin >> 
 }

@@ -2,8 +2,10 @@
 
 int main ()
 {
+	int i = 0;
 	std::string str;
 	std::string explications = "	\"ADD\"		pour ajouter un contact\n	\"SEARCH\"	pour recherher un contact existant\n	\"EXIT\"		pour quitter le répertoire (et perdre tout vos contacts)\n";	
+	PhoneBook repertoire;
 	for(;;)
 	{
 		std::cout << "Entree possible :\n" << explications << "Que souhaitez vous faire ?" << std::endl;
@@ -23,6 +25,9 @@ int main ()
 			std::cout << "Entree non valable.\n";
 		}
 		std::cout << "\n-------------------------------------------------------------------------------------------\n\n";
+		i++;
+		if (i == 8)
+			i = 0;
 	}
 	return 0;
 }
