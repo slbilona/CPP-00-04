@@ -16,7 +16,7 @@ re : clean all
 
 git : clean
 	git add *
-	git commit -m "$(shell date +'%Y-%m-%d %H:%M:%S')"
+	git commit -m "$(shell date +'%d%/%m/%Y %Hh%M')"
 	git push
 
 .PHONY : all clean re git
