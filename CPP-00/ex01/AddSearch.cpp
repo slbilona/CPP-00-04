@@ -35,3 +35,8 @@ void add(int i, PhoneBook& repertoire)
 		erreurDeSaisie("Quel est le PLUS LOURD SECRET du contact ?", 0);
 	repertoire.contacts[i] = contact;
 }
+
+void search(PhoneBook& repertoire)
+{
+
+}

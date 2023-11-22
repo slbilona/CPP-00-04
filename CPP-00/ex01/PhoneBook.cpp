@@ -25,7 +25,7 @@ int main ()
 			std::cout << "Entree non valable.\n";
 		}
 		std::cout << "nouveau contact : " << repertoire.contacts[i].Prenom << std::endl;
-		std::cout << "\n-------------------------------------------------------------------------------------------\n\n";
+		std::cout << "\n--------------------☎️--------------------\n\n";
 		i++;
 		if (i == 8)
 			i = 0;
