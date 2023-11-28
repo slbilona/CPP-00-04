@@ -1,9 +1,9 @@
 CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = repertoire
-SRCS = tests.cpp \
-	Account.cpp \
+SRCS = Account.cpp \
+	tests.cpp \
 
 all: $(NAME)
 
