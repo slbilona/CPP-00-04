@@ -9,7 +9,7 @@ int main ()
 			std::cout << "\n----------------------------🌷-📞-🌷----------------------------\n\n";
 	for(;;)
 	{
-		std::cout << "Entree possible :\n" << explications << "Que souhaitez vous faire ?" << std::endl;
+		std::cout << "Entrees possible :\n" << explications << "Que souhaitez vous faire ?" << std::endl;
 		std::cin >> str;
 		if (str == "ADD")
 		{
