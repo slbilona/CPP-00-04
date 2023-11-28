@@ -8,3 +8,4 @@
 
 void add(int i, PhoneBook& repertoire);
 void search(PhoneBook& repertoire);
+void erreurDeSaisie(const std::string& str, int i);
