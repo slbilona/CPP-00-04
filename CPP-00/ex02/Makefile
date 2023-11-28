@@ -1,7 +1,7 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = repertoire
+NAME = account
 SRCS = Account.cpp \
 	tests.cpp \
 

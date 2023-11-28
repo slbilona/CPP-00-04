@@ -11,7 +11,8 @@ int Account::getNbAccounts(void) {
 
 void Account::displayAccountsInfos()
 {
-	std::cout << "test\n";
+	std::cout << "[date] \n";
+	[19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
 }
 
 void Account::makeDeposit(int deposit)
@@ -27,6 +28,23 @@ Account::Account(int initial_deposit)
 	_amount = initial_deposit;
 	_accountIndex = _nbAccounts;
 	_nbAccounts++;
+	std::cout << "[date] index:" << _accountIndex << ";amount:" << _amount << ";created\n";
 }
 
-bool Account::makeWithdrawal
+bool Account::makeWithdrawal(int withdrawal)
+{
+	if ((_amount - withdrawal) >= 0)
+		return true;
+	else
+		return false;
+}
+
+void Account::displayStatus(void) const
+{
+	std::cout << "display\n";
+}
+
+Account::~Account ()
+{
+	std::cout << "[date] index:" << _accountIndex << ";amount:" << _amount << ";closed\n";
+}
