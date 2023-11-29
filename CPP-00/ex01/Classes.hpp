@@ -1,3 +1,10 @@
+#include <iostream>
+#include <cstring>
+#include <limits>
+#include <cstdlib>
+#include <iomanip>
+#include <string>
+
 class Contact {
 public:
 	int		NumeroDeTelephone;
@@ -21,4 +28,7 @@ public:
 class PhoneBook {
 public:
 	Contact contacts[8];
+	void add(int i, PhoneBook& repertoire);
+	void search(PhoneBook& repertoire);
+	void erreurDeSaisie(const std::string& str, int i);
 };

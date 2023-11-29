@@ -1,6 +1,7 @@
-#include "Prototypes.hpp"
+//#include "Prototypes.hpp"
+#include "Classes.hpp"
 
-void erreurDeSaisie(const std::string& str, int i)
+void  PhoneBook::erreurDeSaisie(const std::string& str, int i)
 {
 		if (std::cin.eof())
 		{
@@ -15,7 +16,7 @@ void erreurDeSaisie(const std::string& str, int i)
 
 }
 
-void add(int i, PhoneBook& repertoire)
+void PhoneBook::add(int i, PhoneBook& repertoire)
 {
 	Contact contact;
 	std::cout << "Quel est le PRENOM du contact ?\n";
@@ -52,7 +53,7 @@ void afficherNom(const char* str)
 	}
 }
 
-void search(PhoneBook& repertoire)
+void PhoneBook::search(PhoneBook& repertoire)
 {
 	int index = 0;
 	std::cout << std::setw(11) << std::right << "Index" << "|";

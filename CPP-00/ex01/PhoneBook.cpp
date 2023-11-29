@@ -1,4 +1,5 @@
-#include "Prototypes.hpp"
+//#include "Prototypes.hpp"
+#include "Classes.hpp"
 
 int main ()
 {
@@ -14,14 +15,14 @@ int main ()
 		{
 			if (str == "ADD")
 			{
-				add(i, repertoire);
+				repertoire.add(i, repertoire);
 				i++;
 				if (i == 8)
 				i = 0;
 			}
 			else if (str == "SEARCH")
 			{
-				search(repertoire);
+				repertoire.search(repertoire);
 			}
 			else if (str == "EXIT")
 			{
@@ -33,7 +34,7 @@ int main ()
 			}
 		}
 		else
-			erreurDeSaisie("NULL", 0);
+			repertoire.erreurDeSaisie("NULL", 0);
 		std::cout << "\n----------------------------🌷-📞-🌷----------------------------\n\n";
 	}
 	return 0;
