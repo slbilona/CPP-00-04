@@ -3,8 +3,9 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = zombie
 SRCS = main.cpp \
+	newZombie.cpp \
 	Zombie.cpp \
-	zombieHorde.cpp \
+	randomChump.cpp \
 
 all: $(NAME)
 
@@ -17,7 +18,7 @@ clean:
 re : clean all
 
 git : clean
-	git add ../*
+	git add *
 	git commit -m "$(shell date +'%d/%m/%Y %Hh%M')"
 	git push
 
