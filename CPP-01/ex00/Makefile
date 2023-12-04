@@ -18,7 +18,7 @@ clean:
 re : clean all
 
 git : clean
-	git add *
+	git add ../../*
 	git commit -m "$(shell date +'%d/%m/%Y %Hh%M')"
 	git push
 
