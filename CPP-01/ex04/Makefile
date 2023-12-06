@@ -1,11 +1,9 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = violenceInutile
-SRCS = HumanA.cpp \
-	HumanB.cpp \
-	main.cpp \
-	Weapon.cpp \
+NAME = replace
+SRCS = main.cpp \
+	fichier.cpp \
 
 all: $(NAME)
 

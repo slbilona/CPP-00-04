@@ -3,10 +3,15 @@
 Zombie* zombieHorde( int N, std::string name )
 {
 	Zombie *horde = new Zombie[N];
-	for(int i = 0; i < N; i++)
+	if (horde != NULL)
 	{
-		horde[i].newName(name);
-		horde[i].announce();
+		for(int i = 0; i < N; i++)
+		{
+			horde[i].newName(name);
+			horde[i].announce();
+		}
+		return (horde);
 	}
-	return (horde);
+	std::cerr << "Erreur d'allocation de mémoire." << std::endl;
+	return NULL;
 }
