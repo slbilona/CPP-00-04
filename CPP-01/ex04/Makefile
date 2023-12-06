@@ -3,7 +3,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = replace
 SRCS = main.cpp \
-	fichier.cpp \
+	manipulationFichier.cpp \
 
 all: $(NAME)
 
