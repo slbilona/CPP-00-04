@@ -2,29 +2,40 @@
 
 int ouvertureFichier(const std::string& monFichier, const std::string& s1, const std::string& s2)
 {
-    // Création d'un objet ifstream pour lire le fichier
-    std::ifstream fichier(monFichier.c_str());
-    if (!fichier.is_open())
+	std::ifstream fichier(monFichier.c_str());
+	if (!fichier.is_open())
 	{
-        std::cerr << "Erreur lors de l'ouverture du fichier." << std::endl;
-        return 1;
-    }
-
-    //creer le nouveau fichier
-    std::string nomNouvFichier = monFichier + ".replace";
-	std::ofstream nouveauFichier(nomNouvFichier);
-
-    // Vérification si la création du fichier a réussi
-    if (!nouveauFichier.is_open()) {
-        std::cerr << "Erreur lors de la création du nouveauFichier." << std::endl;
-        return 1; // Quitter le programme avec un code d'erreur
-    }
-
-    // Écrire du texte dans le fichier
-    nouveauFichier << "Contenu du nouveau fichier." << std::endl;
-
-    // Fermer le fichier
-    nouveauFichier.close();
-    fichier.close();
+		std::cerr << "Erreur lors de l'ouverture du fichier." << std::endl;
+		return 1;
+	}
+	std::string nomNouvFichier = monFichier + ".replace";
+	const char* nomNouvFichierCStr = nomNouvFichier.c_str();
+	std::ofstream nouveauFichier(nomNouvFichierCStr);
+	if (!nouveauFichier.is_open())
+	{
+		std::cerr << "Erreur lors de la création du nouveauFichier." << std::endl;
+		return 1;
+	}
+	ecritureNouveauFichier(fichier, nouveauFichier, s1, s2);
+	fichier.close();
+	nouveauFichier.close();
 	return (0);
+}
+
+void ecritureNouveauFichier(std::ifstream& fichier, std::ofstream& nouveauFichier, const std::string& s1, const std::string& s2)
+{
+	size_t		position;
+	std::string	ligne;
+
+	while (std::getline(fichier, ligne))
+	{
+		position = ligne.find(s1);
+		while (position != std::string::npos)
+		{
+			ligne.erase(position, s1.length());
+			ligne.insert(position, s2);
+			position = ligne.find(s1, position + s2.length());
+		}
+		nouveauFichier << ligne << std::endl;
+	}
 }
