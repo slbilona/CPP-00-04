@@ -41,5 +41,5 @@ void Harl::complain( std::string level )
 			return ;
 		}
 	}
-	std::cout << "\"" << level << "\" ne correspond pas." << std::endl;
+	std::cout << "[ INVALID ]\n\"" << level << "\" ne correspond pas." << std::endl;
 }
