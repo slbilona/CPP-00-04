@@ -2,6 +2,11 @@
 
 Zombie* zombieHorde( int N, std::string name )
 {
+	if (N < 0)
+	{
+		std::cerr << "Impossible d'allouer un nombre inferieur a 0 de zombies" << std::endl;
+		return NULL;
+	}
 	Zombie *horde = new Zombie[N];
 	if (horde != NULL)
 	{
