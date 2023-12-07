@@ -13,7 +13,7 @@ int ouvertureFichier(const std::string& monFichier, const std::string& s1, const
 	std::ofstream nouveauFichier(nomNouvFichierCStr);
 	if (!nouveauFichier.is_open())
 	{
-		std::cerr << "Erreur lors de la création du nouveauFichier." << std::endl;
+		std::cerr << "Erreur lors de la création de \"" << nomNouvFichier << "\"." << std::endl;
 		return 1;
 	}
 	ecritureNouveauFichier(fichier, nouveauFichier, s1, s2);
