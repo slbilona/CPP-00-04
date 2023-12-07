@@ -3,9 +3,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = zombie
 SRCS = main.cpp \
-	newZombie.cpp \
-	Zombie.cpp \
-	randomChump.cpp \
+	Fixed.cpp \
 
 all: $(NAME)
 
