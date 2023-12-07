@@ -1,7 +1,7 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = zombie
+NAME = fixed
 SRCS = main.cpp \
 	Fixed.cpp \
 
