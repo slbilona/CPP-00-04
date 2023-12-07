@@ -16,6 +16,7 @@ public:
 	Harl();
 	~Harl();
 	void complain( std::string level );
+	void ftSwitch(int i);
 };
 
 #endif

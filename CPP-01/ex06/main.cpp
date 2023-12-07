@@ -3,7 +3,11 @@
 int main(int argc, char const *argv[])
 {
 	if (argc < 2)
-		std::cout << "pas assez d'arguments" << std::endl;
+	{
+		std::string level = "RIEN";
+		Harl monHarl;
+		monHarl.complain(level);
+	}
 	else if (argc > 2)
 		std::cout << "trop d'arguments" << std::endl;
 	else

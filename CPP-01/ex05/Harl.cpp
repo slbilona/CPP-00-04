@@ -25,7 +25,7 @@ void	Harl::error( void )
 
 void	Harl::warning( void )
 {
-	std::cout << "[ WARNING ]\nI think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
+	std::cout << "[ WARNING ]\nI think I deserve to have some extra bacon for free.\nI’ve been coming for years whereas you started working here since last month." << std::endl;
 }
 
 void Harl::complain( std::string level )

@@ -25,21 +25,47 @@ void	Harl::error( void )
 
 void	Harl::warning( void )
 {
-	std::cout << "[ WARNING ]\nI think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month.\n" << std::endl;
+	std::cout << "[ WARNING ]\nI think I deserve to have some extra bacon for free.\nI’ve been coming for years whereas you started working here since last month.\n" << std::endl;
 }
 
 void Harl::complain( std::string level )
 {
-	void(Harl::*fonctions[])() = {&Harl::info, &Harl::debug, &Harl::error, &Harl::warning};
-	const char *str[4] = {"INFO", "DEBUG", "ERROR", "WARNING"};
+	int index = 5;
+	void(Harl::*fonctions[])() = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	const char *str[4] = { "DEBUG", "INFO", "WARNING", "ERROR"};
 
 	for (int i = 0; i < 4; i++)
 	{
 		if (level == str[i])
 		{
-			(this->*fonctions[i])();
-			return ;
+			index = i;
+			break ;
 		}
 	}
-	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-}
+	switch (index)
+	{
+	case 0:
+		for(int j = index; j < 4; j++)
+			((this->*fonctions[j])());
+		break;
+	
+	case 1:
+		for(int j = index; j < 4; j++)
+			((this->*fonctions[j])());
+		break;
+
+	case 2:
+		for(int j = index; j < 4; j++)
+			((this->*fonctions[j])());
+		break;
+	
+	case 3:
+		for(int j = index; j < 4; j++)
+			((this->*fonctions[j])());
+		break;
+	
+	default:
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		break;
+	}
+	}
