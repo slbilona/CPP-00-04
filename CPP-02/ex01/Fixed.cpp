@@ -33,3 +33,13 @@ void Fixed::setRawBits( int const raw )
 {
 	valeur = raw;
 }
+
+float Fixed::toFloat( void ) const
+{
+	valeur = std::atof(valeur);
+}
+
+int Fixed::toInt( void ) const
+{
+
+}
