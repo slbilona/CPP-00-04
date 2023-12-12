@@ -3,8 +3,8 @@
 
 #include <iostream>
 
-class Fixed {
-
+class Fixed
+{
 private:
     int                 valeur;
     static const int    nbBits;
