@@ -1,25 +1,29 @@
 #ifndef FIXED_HPP
-#define FIXED_HPP
+# define FIXED_HPP
 
-#include <ostream>
-#include <iostream>
+# include <iostream>
 
 class Fixed
 {
 private:
-	int valeur;
-	const static int nbBits = 8;
+    int                 valeur;
+    static const int    nbBits;
+
 public:
-	Fixed(); // constructeur
-	Fixed(const Fixed& autre); // constructeur de copie
-	Fixed(const int& entier); // constructeur de copi
-	Fixed(const float& entier); // constructeur de copie
-	~Fixed(); // destructeur
-	Fixed& operator=(const Fixed& autre); // operateur d'affectation
-	int getRawBits( void ) const;
-	void setRawBits( int const raw );
-	float toFloat( void ) const;
-	int toInt( void ) const;
+    Fixed();
+    Fixed(const int valeur);
+    Fixed(const float valeur);
+    Fixed(const Fixed& autre);
+    Fixed& operator=(const Fixed& autre);
+    ~Fixed();
+
+    int getRawBits() const;
+    void setRawBits(const int raw);
+    float toFloat() const;
+    int toInt() const;
+
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif
