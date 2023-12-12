@@ -6,22 +6,16 @@ const int Fixed::nbBits = 8;
 
 Fixed::Fixed() : valeur(0) {}
 
-Fixed::Fixed(const int valeur) : valeur(valeur << nbBits)
-{
-}
+Fixed::Fixed(const int valeur) : valeur(valeur << nbBits) {}
 
-Fixed::Fixed(const float valeur) : valeur(roundf(valeur * (1 << nbBits)))
-{
-}
+Fixed::Fixed(const float valeur) : valeur(roundf(valeur * (1 << nbBits))) {}
 
 Fixed::Fixed(const Fixed& autre)
 {
 	*this = autre;
 }
 
-Fixed::~Fixed()
-{
-}
+Fixed::~Fixed() {}
 
 Fixed& Fixed::operator=(const Fixed& autre)
 {
