@@ -4,9 +4,7 @@
 
 const int Fixed::nbBits = 8;
 
-Fixed::Fixed() : valeur(0)
-{
-}
+Fixed::Fixed() : valeur(0) {}
 
 Fixed::Fixed(const int valeur) : valeur(valeur << nbBits)
 {

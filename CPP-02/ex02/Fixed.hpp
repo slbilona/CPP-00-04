@@ -24,7 +24,6 @@ public:
 	float toFloat() const;
 	int toInt() const;
 
-	// Surcharge d'opérateurs
 	bool operator>(const Fixed& autre) const;
 	bool operator<(const Fixed& autre) const;
 	bool operator>=(const Fixed& autre) const;
@@ -37,10 +36,10 @@ public:
 	Fixed operator*(const Fixed& autre) const;
 	Fixed operator/(const Fixed& autre) const;
 
-	Fixed& operator++();    // Pré-incrémentation
-	Fixed operator++(int);  // Post-incrémentation
-	Fixed& operator--();    // Pré-décrémentation
-	Fixed operator--(int);  // Post-décrémentation
+	Fixed& operator++();
+	Fixed operator++(int);
+	Fixed& operator--();
+	Fixed operator--(int);
 
 	static Fixed& min(Fixed& a, Fixed& b);
 	static const Fixed& min(const Fixed& a, const Fixed& b);
