@@ -1,20 +1,13 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : hitPoints(10), energyPoints(10), attackDamage(0)
-{
-	std::cout << "ClapTrap " << name << " is born!" << std::endl;
-}
+ClapTrap::ClapTrap() : hitPoints(10), energyPoints(10), attackDamage(0) {}
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap " << name << " says goodbye!" << std::endl;
 }
 
 
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
-{
-	std::cout << "ClapTrap " << name << " is born!" << std::endl;
-}
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {}
 
 ClapTrap::ClapTrap(const ClapTrap& autre)
 {
