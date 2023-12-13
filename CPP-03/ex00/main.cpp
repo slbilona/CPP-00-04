@@ -2,10 +2,12 @@
 
 int main()
 {
-	std::string ilo = "Ilona";
-	std::string eli = "Elisa";
-	ClapTrap ilona(ilo);
-    ClapTrap elisa(eli);
+    ClapTrap ilona("Ilona");
 
-	ilona.attack(eli);
+	ilona.attack("Elisa");
+    ilona.takeDamage(5);
+    ilona.beRepaired(2);
+	ilona.attack("Elisa");
+    ilona.takeDamage(8);
+    return 0;
 }

@@ -28,16 +28,37 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& autre)
 
 void ClapTrap::attack(const std::string& target)
 {
-	std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << this->hitPoints << " points of damage!" << std::endl;
-	energyPoints--;
+	if (energyPoints != 0 && hitPoints != 0)
+	{
+		std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+		energyPoints--;
+	}
+	else if (energyPoints == 0)
+		std::cout << "ClapTrap " << name << " is out of Energy Points and cannot attack!" << std::endl;
+	else
+		std::cout << "ClapTrap " << name << " is out of Hit Points and cannot attack!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << amount << std::endl;
+	std::cout << "ClapTrap " << name << " takes a hit and suffers " << amount << " points of damage!" << std::endl;
+	hitPoints -= amount;
+	if (hitPoints <= 0)
+		std::cout << "ClapTrap " << name << " died." << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout << amount << std::endl;
+	if (energyPoints != 0 && hitPoints != 0)
+	{
+		if (hitPoints + amount > 10)
+            std::cout << "ClapTrap " << name << " is repaired, gaining " << amount << " hit points and is fully charged with energy!" << std::endl;
+		else
+			std::cout << "ClapTrap " << name << " is repaired, gaining " << amount << " hit points!" << std::endl;
+		energyPoints--;
+	}
+	else if (energyPoints == 0)
+		std::cout << "ClapTrap " << name << " is out of Energy Points and cannot be repaired!" << std::endl;
+	else
+		std::cout << "ClapTrap " << name << " is out of Hit Points and cannot be repaired!" << std::endl;
 }
