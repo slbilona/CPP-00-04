@@ -1,16 +1,18 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : hitPoints(10), energyPoints(10), attackDamage(0) {}
-
-ClapTrap::~ClapTrap()
+ClapTrap::ClapTrap()
 {
+	std::cout << "ClapTrap Default Constructor called" << std::endl;
 }
 
-
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0) {}
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
+{
+	std::cout << "ClapTrap Constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap(const ClapTrap& autre)
 {
+	std::cout << "ClapTrap Copy Constructor called" << std::endl;
 	*this = autre;
 }
 
@@ -22,8 +24,14 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& autre)
 		this->hitPoints = autre.hitPoints;
 		this->energyPoints = autre.energyPoints;
 		this->attackDamage = autre.attackDamage;
+        std::cout << "ClapTrap Assignment Operator called" << std::endl;
 	}
 	return *this;
+}
+
+ClapTrap::~ClapTrap()
+{
+	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -51,10 +59,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (energyPoints != 0 && hitPoints != 0)
 	{
-		if (hitPoints + amount > 10)
-            std::cout << "ClapTrap " << name << " is repaired, gaining " << amount << " hit points and is fully charged with energy!" << std::endl;
-		else
-			std::cout << "ClapTrap " << name << " is repaired, gaining " << amount << " hit points!" << std::endl;
+		std::cout << "ClapTrap " << name << " is repaired, gaining " << amount << " hit points!" << std::endl;
 		energyPoints--;
 	}
 	else if (energyPoints == 0)
