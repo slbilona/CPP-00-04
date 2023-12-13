@@ -1,9 +1,11 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = fixed
+NAME = ClapTrap
 SRCS = main.cpp \
-	Fixed.cpp \
+	ClapTrap.cpp \
+	ScavTrap.cpp \
+	FragTrap.cpp \
 
 all: $(NAME)
 
