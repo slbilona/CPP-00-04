@@ -1,8 +1,8 @@
-#include "Animal.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "../includes/Animal.hpp"
+#include "../includes/WrongCat.hpp"
+#include "../includes/WrongCat.hpp"
+#include "../includes/Cat.hpp"
+#include "../includes/Dog.hpp"
 
 int main()
 {

@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "../includes/Animal.hpp"
 
 Animal::Animal() : type("Animal")
 {
@@ -16,7 +16,7 @@ Animal& Animal::operator=(const Animal& autre)
 	if (this != &autre)
 	{
 		this->type = autre.type;
-		std::cout << "Animal : oerateur d'affectation appelle" << std::endl;
+		std::cout << "Animal : operateur d'affectation appelle" << std::endl;
 	}
 	return *this;
 }

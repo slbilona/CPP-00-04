@@ -1,4 +1,4 @@
-#include "WrongAnimal.hpp"
+#include "../includes/WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
@@ -16,7 +16,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& autre)
 	if (this != &autre)
 	{
 		this->type = autre.type;
-		std::cout << "WrongAnimal : oerateur d'affectation appelle" << std::endl;
+		std::cout << "WrongAnimal : operateur d'affectation appelle" << std::endl;
 	}
 	return *this;
 }

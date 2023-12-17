@@ -1,4 +1,4 @@
-#include "WrongCat.hpp"
+#include "../includes/WrongCat.hpp"
 
 WrongCat::WrongCat() : WrongAnimal()
 {
@@ -6,10 +6,9 @@ WrongCat::WrongCat() : WrongAnimal()
 	std::cout << "WrongCat : constructeur par default appelle" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& autre) : WrongAnimal()
+WrongCat::WrongCat(const WrongCat& autre) : WrongAnimal(autre)
 {
 	*this = autre;
-	type = "WrongCat";
 	std::cout << "WrongCat : constructeur de recopie appelle" << std::endl;
 }
 
@@ -18,7 +17,7 @@ WrongCat& WrongCat::operator=(const WrongCat& autre)
 	if (this != &autre)
 	{
 		this->type = autre.type;
-		std::cout << "WrongCat : oerateur d'affectation appelle" << std::endl;
+		std::cout << "WrongCat : operateur d'affectation appelle" << std::endl;
 	}
 	return *this;
 }
