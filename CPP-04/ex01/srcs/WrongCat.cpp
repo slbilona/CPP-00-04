@@ -8,6 +8,7 @@ WrongCat::WrongCat() : WrongAnimal()
 
 WrongCat::WrongCat(const WrongCat& autre) : WrongAnimal(autre)
 {
+	type = "WrongCat";
 	std::cout << "WrongCat : constructeur de recopie appelé" << std::endl;
 }
 
