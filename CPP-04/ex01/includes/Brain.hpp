@@ -8,12 +8,12 @@
 class Brain
 {
 private:
-    std::string ideas[100];
+	std::string *ideas;
 public:
-    Brain();
-    Brain(const Brain& autre);
-    Brain& operator=(const Brain& autre);
-    ~Brain();
+	Brain();
+	Brain(const Brain& autre);
+	Brain& operator=(const Brain& autre);
+	~Brain();
 };
 
 

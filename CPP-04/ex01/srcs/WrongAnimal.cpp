@@ -2,13 +2,13 @@
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
-	std::cout << "WrongAnimal : constructeur par default appelle" << std::endl;
+	std::cout << "WrongAnimal : constructeur par défault appelé" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& autre)
 {
 	type = autre.type;
-	std::cout << "WrongAnimal : constructeur de recopie appelle" << std::endl;
+	std::cout << "WrongAnimal : constructeur de recopie appelé" << std::endl;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& autre)
@@ -16,14 +16,14 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& autre)
 	if (this != &autre)
 	{
 		this->type = autre.type;
-		std::cout << "WrongAnimal : oerateur d'affectation appelle" << std::endl;
+		std::cout << "WrongAnimal : opérateur d'affectation appelé" << std::endl;
 	}
 	return *this;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "WrongAnimal : destructeur par default appelle" << std::endl;
+	std::cout << "WrongAnimal : destructeur par défault appelé" << std::endl;
 }
 
 void WrongAnimal::makeSound() const

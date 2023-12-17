@@ -3,13 +3,13 @@
 Cat::Cat() : Animal()
 {
 	type = "Cat";
-	std::cout << "Cat : constructeur par default appelle" << std::endl;
+	std::cout << "Cat : constructeur par défault appelé" << std::endl;
 }
 
 Cat::Cat(const Cat& autre) : Animal(autre)
 {
-	*this = autre;
-	std::cout << "Cat : constructeur de recopie appelle" << std::endl;
+	type = "Cat";
+	std::cout << "Cat : constructeur de recopie appelé" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& autre)
@@ -17,14 +17,14 @@ Cat& Cat::operator=(const Cat& autre)
 	if (this != &autre)
 	{
 		this->type = autre.type;
-		std::cout << "Cat : operateur d'affectation appelle" << std::endl;
+		std::cout << "Cat : opérateur d'affectation appelé" << std::endl;
 	}
 	return *this;
 }
 
 Cat::~Cat()
 {
-	std::cout << "Cat : destructeur par default appelle" << std::endl;
+	std::cout << "Cat : destructeur par défault appelé" << std::endl;
 }
 
 void Cat::makeSound() const

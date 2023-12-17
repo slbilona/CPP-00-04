@@ -28,7 +28,7 @@ int main()
 	Dog basic;
 	{
 		Dog tmp = basic;
-		std::cout << tmp.getType() << std::endl;
+		//td::cout << tmp.getType() << std::endl;
 	}
 
 	// std::cout << "------------------- TEST 00 -------------------" << std::endl;
