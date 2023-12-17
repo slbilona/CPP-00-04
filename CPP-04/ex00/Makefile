@@ -3,9 +3,11 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = ClapTrap
 SRCS = main.cpp \
-	Animal.cpp \
-	Cat.cpp \
 	Dog.cpp \
+	Cat.cpp \
+	Animal.cpp \
+	WrongCat.cpp \
+	WrongAnimal.cpp \
 
 all: $(NAME)
 
