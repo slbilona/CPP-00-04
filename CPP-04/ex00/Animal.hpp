@@ -16,7 +16,7 @@ public :
 	virtual ~Animal();
 
 	virtual void makeSound() const;
-
+	
 };
 
 #endif
