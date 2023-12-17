@@ -5,6 +5,7 @@ NAME = ClapTrap
 SRCS = main.cpp \
 	Animal.cpp \
 	Cat.cpp \
+	Dog.cpp \
 
 all: $(NAME)
 

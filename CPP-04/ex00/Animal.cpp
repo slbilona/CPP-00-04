@@ -30,3 +30,8 @@ void Animal::makeSound() const
 {
 	std::cout << "Je suis un animal non identifie" << std::endl;
 }
+
+std::string Animal::getType() const
+{
+	return (type);
+}
