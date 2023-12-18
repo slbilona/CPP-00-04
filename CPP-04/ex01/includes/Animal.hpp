@@ -4,6 +4,7 @@
 #include <string>
 #include "iostream"
 #include "ostream"
+#include "Brain.hpp"
 
 class Animal
 {
@@ -16,7 +17,7 @@ public :
 	virtual ~Animal();
 
 	virtual void makeSound() const;
-
+	std::string getType() const;
 };
 
 #endif

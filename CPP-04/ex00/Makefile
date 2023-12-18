@@ -1,10 +1,13 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ClapTrap
-SRCS = main.cpp \
-	Animal.cpp \
-	Cat.cpp \
+NAME = Animaux
+SRCS = srcs/main.cpp \
+	srcs/Dog.cpp \
+	srcs/Cat.cpp \
+	srcs/Animal.cpp \
+	srcs/WrongCat.cpp \
+	srcs/WrongAnimal.cpp \
 
 all: $(NAME)
 
