@@ -2,7 +2,7 @@
 
 ClapTrap::ClapTrap() : hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	std::cout << "ClapTrap " << name << " is born!" << std::endl;
+	std::cout << "ClapTrap is born!" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -16,9 +16,9 @@ ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(1
 	std::cout << "ClapTrap " << name << " is born!" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& autre)
+ClapTrap::ClapTrap(const ClapTrap& autre) : name(autre.name), hitPoints(autre.hitPoints), energyPoints(autre.energyPoints), attackDamage(autre.attackDamage)
 {
-	*this = autre;
+	std::cout << "constructeur de copie appele" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& autre)
@@ -29,6 +29,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& autre)
 		this->hitPoints = autre.hitPoints;
 		this->energyPoints = autre.energyPoints;
 		this->attackDamage = autre.attackDamage;
+		std::cout << "operateur d'assignation appele" << std::endl;
 	}
 	return *this;
 }
