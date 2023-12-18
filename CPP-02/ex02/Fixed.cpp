@@ -12,7 +12,7 @@ Fixed::Fixed(const float valeur) : valeur(roundf(valeur * (1 << nbBits))) {}
 
 Fixed::Fixed(const Fixed& autre)
 {
-	*this = autre;
+	valeur = autre.valeur;
 }
 
 Fixed::~Fixed() {}

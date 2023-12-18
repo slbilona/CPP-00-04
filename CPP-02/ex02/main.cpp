@@ -30,10 +30,10 @@ int main( void )
 		Fixed produit = a * b;
 		Fixed quotient = a / b;
 
-		std::cout << "Somme : " << somme << std::endl;
-		std::cout << "Différence : " << différence << std::endl;
-		std::cout << "Produit : " << produit << std::endl;
-		std::cout << "Quotient : " << quotient << std::endl;
+		std::cout << "a + b : " << somme << std::endl;
+		std::cout << "a - b : " << différence << std::endl;
+		std::cout << "a * b : " << produit << std::endl;
+		std::cout << "a / b : " << quotient << std::endl;
 
 		std::cout << "\nOpérateurs de comparaison :" << std::endl;
 		std::cout << "a > b : " << (a > b) << std::endl;
