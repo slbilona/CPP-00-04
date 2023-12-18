@@ -20,8 +20,8 @@ Fixed::Fixed(const float valeur) : valeur(roundf(valeur * (1 << nbBits)))
 
 Fixed::Fixed(const Fixed& autre)
 {
+	valeur = autre.getRawBits();
 	std::cout << "Copy constructor called" << std::endl;
-	*this = autre;
 }
 
 Fixed::~Fixed()
@@ -31,9 +31,11 @@ Fixed::~Fixed()
 
 Fixed& Fixed::operator=(const Fixed& autre)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &autre)
+	{
 		this->valeur = autre.getRawBits();
+		std::cout << "Copy assignment operator called" << std::endl;
+	}
 	return *this;
 }
 
