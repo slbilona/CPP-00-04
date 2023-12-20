@@ -6,7 +6,6 @@
 
 int main()
 {
-	std::cout << "\n------------- TEST 00 -------------" << std::endl;
 	Dog *Chien = new Dog;
 	Chien->makeSound();
 	// Animal animal = new Animal;
