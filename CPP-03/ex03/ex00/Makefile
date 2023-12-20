@@ -1,10 +1,9 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = ScavTrap
+NAME = ClapTrap
 SRCS = main.cpp \
 	ClapTrap.cpp \
-	ScavTrap.cpp \
 
 all: $(NAME)
 

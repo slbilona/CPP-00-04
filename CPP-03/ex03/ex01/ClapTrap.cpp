@@ -10,8 +10,12 @@ ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(1
 	std::cout << "ClapTrap Constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& autre) : name(autre.name), hitPoints(10), energyPoints(10), attackDamage(0)
+ClapTrap::ClapTrap(const ClapTrap& autre)
 {
+	name = autre.name;
+    hitPoints = autre.hitPoints;
+    energyPoints = autre.energyPoints;
+    attackDamage = autre.attackDamage;
 	std::cout << "ClapTrap Copy Constructor called" << std::endl;
 }
 
@@ -65,15 +69,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << name << " is out of Energy Points and cannot be repaired!" << std::endl;
 	else
 		std::cout << "ClapTrap " << name << " is out of Hit Points and cannot be repaired!" << std::endl;
-}
-
-void ClapTrap::displayStats() const
-{
-    std::cout << name << " Stats: " << "Hit Points: " << hitPoints << ", Energy Points: " << energyPoints << ", Attack Damage: " << attackDamage << std::endl;
-}
-
-
-int ClapTrap::getHitPoints()
-{
-	return (hitPoints);
 }

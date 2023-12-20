@@ -7,7 +7,7 @@ Animal::Animal() : type("Animal")
 
 Animal::Animal(const Animal& autre)
 {
-	type = "Animal";
+	type = autre.type;
 	std::cout << "Animal : constructeur de recopie appelé" << std::endl;
 }
 

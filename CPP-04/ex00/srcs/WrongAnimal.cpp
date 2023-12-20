@@ -5,9 +5,9 @@ WrongAnimal::WrongAnimal() : type("WrongAnimal")
 	std::cout << "WrongAnimal : constructeur par défault appelé" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal& autre) : type("WrongAnimal")
+WrongAnimal::WrongAnimal(const WrongAnimal& autre)
 {
-	type = "WrongAnimal";
+	type = autre.type;
 	std::cout << "WrongAnimal : constructeur de recopie appelé" << std::endl;
 }
 
