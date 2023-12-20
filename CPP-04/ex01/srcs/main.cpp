@@ -32,5 +32,11 @@ int main()
 	delete j;//should not create a leak
 	delete i;
 
+	std::cout << "\n------------- TEST 02 -------------" << std::endl;
+	Dog Basic;
+	{
+		Dog tmp = Basic;
+	}
+
 	return 0;
 }
