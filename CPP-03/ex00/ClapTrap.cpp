@@ -1,15 +1,9 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : hitPoints(10), energyPoints(10), attackDamage(0)
+ClapTrap::ClapTrap() : name("defaultName"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << "ClapTrap is born!" << std::endl;
 }
-
-ClapTrap::~ClapTrap()
-{
-	std::cout << "ClapTrap " << name << " says goodbye!" << std::endl;
-}
-
 
 ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
@@ -32,6 +26,11 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& autre)
 		std::cout << "operateur d'assignation appele" << std::endl;
 	}
 	return *this;
+}
+
+ClapTrap::~ClapTrap()
+{
+	std::cout << "ClapTrap " << name << " says goodbye!" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
