@@ -8,7 +8,7 @@ Cat::Cat() : Animal()
 
 Cat::Cat(const Cat& autre) : Animal(autre)
 {
-	type = "Cat";
+	type = autre.type;
 	std::cout << "Cat : constructeur de recopie appelé" << std::endl;
 }
 

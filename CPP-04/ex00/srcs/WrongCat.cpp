@@ -8,7 +8,7 @@ WrongCat::WrongCat() : WrongAnimal()
 
 WrongCat::WrongCat(const WrongCat& autre) : WrongAnimal(autre)
 {
-	type = "WrongCat";
+	type = autre.type;
 	std::cout << "WrongCat : constructeur de recopie appelé" << std::endl;
 }
 
@@ -25,4 +25,10 @@ WrongCat& WrongCat::operator=(const WrongCat& autre)
 WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat : destructeur par défault appelé" << std::endl;
+}
+
+
+void WrongCat::makeSound() const
+{
+	std::cout << "miaou" << std::endl;
 }

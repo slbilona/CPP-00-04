@@ -17,17 +17,21 @@ int main()
     j->makeSound();
     delete j;
     std::cout << "\n------------------- TEST 02 -------------------" << std::endl;
-    const Animal* i = new Cat();
+    const Animal* i = new Cat;
+    const Animal* ptrA = i;
     std::cout << "type : " << i->getType() << " " << std::endl;
     i->makeSound();
+    ptrA->makeSound();
     delete i;
     std::cout << "\n------------------- WRONGTEST -------------------" << std::endl;
-    const WrongAnimal *wrongAnimal = new WrongAnimal();
-    const WrongCat *wrongCat = new WrongCat();
+    WrongAnimal *wrongAnimal = new WrongAnimal;
+    WrongCat *wrongCat = new WrongCat;
+    WrongAnimal* ptrWA = wrongCat;
     std::cout << "type : " << wrongAnimal->getType() << " " << std::endl;
     std::cout << "type : " << wrongCat->getType() << " " << std::endl;
     wrongAnimal->makeSound();
     wrongCat->makeSound();
+    ptrWA->makeSound();
     delete wrongAnimal;
     delete wrongCat;
 
