@@ -6,13 +6,15 @@
 class MateriaSource : public IMateriaSource
 {
 private:
-    /* data */
+	AMateria* inventory[4];
 public:
-    MateriaSource(/* args */);
-    ~MateriaSource();
+	MateriaSource();
+	MateriaSource(const MateriaSource& autre);
+	MateriaSource& operator=(const MateriaSource& autre);
+	~MateriaSource();
+
+	void learnMateria(AMateria*);
+	AMateria* createMateria(std::string const & type);
 };
-
-
-
 
 #endif // MATERIASOURCE_HPP
