@@ -32,8 +32,8 @@ Character& Character::operator=(const Character& autre)
 	if (this != &autre)
 	{
 		this->name = autre.name;
-		// for (int i = 0; i < 4; i++)
-        // 	if (this->inventory[i]) delete this->inventory[i];
+		for (int i = 0; i < 4; i++)
+        	if (this->inventory[i]) delete this->inventory[i];
 		for (int i = 0; i < 4; i++)
         {
             if (autre.inventory[i] != NULL)
@@ -88,10 +88,6 @@ void Character::unequip(int idx)
 	else
 	{
 		inventory[idx] = NULL;
-		// for (int i = idx; i < 3; i++)
-		// {
-		// 	inventory[i] = inventory[i+1];
-		// }
 	}
 }
 
