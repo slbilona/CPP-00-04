@@ -18,7 +18,7 @@ Dog& Dog::operator=(const Dog& autre)
 {
 	if (this != &autre)
 	{
-		this->type = autre.type;
+		Animal::operator=(autre);
 		delete brain;
 		this->brain = (autre.brain) ? new Brain(*autre.brain) : 0;
 		std::cout << "Dog : opérateur d'affectation appelé" << std::endl;

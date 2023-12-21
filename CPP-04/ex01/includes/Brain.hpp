@@ -8,20 +8,13 @@
 class Brain
 {
 private:
-    std::string *ideas; // tableau de 100 std::string
+	std::string *ideas; // tableau de 100 std::string
 
 public:
-    // Constructeur par défaut
-    Brain();
-
-    // Constructeur de copie
-    Brain(const Brain &other);
-
-    // Opérateur d'affectation
-    Brain &operator=(const Brain &other);
-
-    // Destructeur
-    ~Brain();
+	Brain();
+	Brain(const Brain &other);
+	Brain &operator=(const Brain &other);
+	~Brain();
 };
 
 

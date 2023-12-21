@@ -8,9 +8,7 @@ Brain::Brain() : ideas(new std::string[100])
 Brain::Brain(const Brain &autre) : ideas(new std::string[100])
 {
 	for (int i = 0; i < 100; ++i)
-	{
 		ideas[i] = autre.ideas[i];
-	}
 	std::cout << "Brain : constructeur de copie appelé" << std::endl;
 }
 
@@ -18,14 +16,10 @@ Brain& Brain::operator=(const Brain &autre)
 {
 	if (this != &autre)
 	{
-		delete[] ideas; // libérer la mémoire précédemment allouée
-
+		delete[] ideas;
 		ideas = new std::string[100];
 		for (int i = 0; i < 100; ++i)
-		{
 			ideas[i] = autre.ideas[i];
-		}
-
 		std::cout << "Brain : opérateur d'affectation appelé" << std::endl;
 	}
 	return *this;
