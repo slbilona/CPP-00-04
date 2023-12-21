@@ -2,7 +2,11 @@ CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 NAME = Interface
-SRCS = main.cpp \
+SRCS = srcs/main.cpp \
+	srcs/Ice.cpp \
+	srcs/Cure.cpp \
+	srcs/AMateria.cpp \
+	srcs/Character.cpp \
 
 all: $(NAME)
 
