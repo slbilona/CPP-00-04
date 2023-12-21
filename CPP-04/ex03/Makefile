@@ -1,5 +1,5 @@
 CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 NAME = Interface
 SRCS = srcs/main.cpp \
@@ -7,6 +7,7 @@ SRCS = srcs/main.cpp \
 	srcs/Cure.cpp \
 	srcs/AMateria.cpp \
 	srcs/Character.cpp \
+	srcs/MateriaSource.cpp \
 
 all: $(NAME)
 

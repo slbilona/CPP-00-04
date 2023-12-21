@@ -32,12 +32,28 @@ MateriaSource::~MateriaSource()
 	std::cout << "MateriaSource : destructeur par default appelé" << std::endl;
 }
 
-void MateriaSource::learnMateria(AMateria*)
+void MateriaSource::learnMateria(AMateria* materia)
 {
-
+	for (int i = 0; i < 4; ++i)
+	{
+		if (inventory[i] == NULL)
+		{
+			std::cout << "Materia source learned " << materia->getType() << std::endl;
+			inventory[i] = materia;
+			break;
+		}
+	}
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)
 {
-
+    for (int i = 0; i < 4; ++i)
+	{
+        if (inventory[i] != NULL && inventory[i]->getType() == type)
+		{
+			std::cout << "Materia source creates " << type << std::endl;
+            return inventory[i]->clone();
+		}
+    }
+    return NULL;
 }

@@ -2,6 +2,7 @@
 #define IMATERIASOURCE_HPP
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 class IMateriaSource
 {

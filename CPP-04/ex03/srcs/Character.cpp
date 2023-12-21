@@ -18,7 +18,12 @@ Character::Character(const Character& autre)
 {
 	name = autre.name + "Copy";
 	for (int i = 0; i < 4; i++)
-		inventory[i] = autre.inventory[i];
+	{
+		if (autre.inventory[i] != NULL)
+			this->inventory[i] = autre.inventory[i]->clone();
+		else
+			this->inventory[i] = NULL;
+	}
 	std::cout << "Character : constructeur de recopie appelé" << std::endl;
 }
 
@@ -27,8 +32,15 @@ Character& Character::operator=(const Character& autre)
 	if (this != &autre)
 	{
 		this->name = autre.name;
+		// for (int i = 0; i < 4; i++)
+        // 	if (this->inventory[i]) delete this->inventory[i];
 		for (int i = 0; i < 4; i++)
-			inventory[i] = autre.inventory[i];
+        {
+            if (autre.inventory[i] != NULL)
+                this->inventory[i] = autre.inventory[i]->clone();
+            else
+                this->inventory[i] = NULL;
+        }
 		std::cout << "Character : opérateur d'affectation appelé" << std::endl;
 	}
 	return *this;
@@ -36,8 +48,10 @@ Character& Character::operator=(const Character& autre)
 
 Character::~Character()
 {
-	for (int i = 0; i < 4; i++)
-		if (inventory[i]) delete inventory[i];
+    for (int i = 0; i < 4; i++)
+	{
+        if (this->inventory[i]) delete this->inventory[i];
+	}
 	std::cout << "Character : destructeur par default appelé" << std::endl;
 }
 
@@ -48,12 +62,17 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-	int i = 0;
-	while(i < 4)
+	if (!m)
 	{
-		if (inventory[i] != NULL)
+		std::cout << "le materia n'existe pas" << std::endl;
+		return ;
+	}
+	for(int i = 0; i < 4; i++)
+	{
+		if (inventory[i] == NULL)
 		{
 			inventory[i] = m;
+			std::cout << name << " s'est equipé de " << m->getType() << " a l'espace " << i << " de son inventaire"<< std::endl;
 			return ;
 		}
 	}
@@ -69,10 +88,10 @@ void Character::unequip(int idx)
 	else
 	{
 		inventory[idx] = NULL;
-		for (int i = idx; i < 3; i++)
-		{
-			inventory[i] = inventory[i+1];
-		}
+		// for (int i = idx; i < 3; i++)
+		// {
+		// 	inventory[i] = inventory[i+1];
+		// }
 	}
 }
 
@@ -87,4 +106,9 @@ void Character::use(int idx, ICharacter& target)
 		std::cout << name << " utilise son " << inventory[idx]->getType() << " contre " << target.getName() << "." << std::endl;
 		inventory[idx]->use(target);
 	}
+}
+
+AMateria* Character::getMateria(int idx)
+{
+	return (this->inventory[idx]);
 }
