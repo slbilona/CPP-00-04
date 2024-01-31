@@ -1,18 +1,12 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string _name) : name(_name)
-{
-	return ;
-}
+HumanB::HumanB(std::string _name) : name(_name) {}
 
-HumanB::~HumanB()
-{
-}
+HumanB::~HumanB() {}
 
 void HumanB::attack()
 {
-	const std::string& typeREF = arme->getType();
-	std::cout << name << " attacks with their " << typeREF << std::endl;
+	std::cout << name << " attacks with their " << arme->getType() << std::endl;
 }
 
 //arme est un pointeur sur weapon

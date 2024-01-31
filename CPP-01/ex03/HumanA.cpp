@@ -1,13 +1,8 @@
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string _name, Weapon& uneArme) : arme(uneArme), name(_name)
-{
-	return ;
-}
+HumanA::HumanA(std::string _name, Weapon& uneArme) : arme(uneArme), name(_name) {}
 
-HumanA::~HumanA()
-{
-}
+HumanA::~HumanA() {}
 
 void HumanA::attack()
 {
