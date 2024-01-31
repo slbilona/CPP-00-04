@@ -5,9 +5,9 @@ void Zombie::announce(void)
 	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie::Zombie() : name("NULL") // Constructeur : initialisation de la variable name a NULL
+Zombie::Zombie() : name("") // Constructeur : initialisation de la variable name a NULL
 {
-	return ;
+	std::cout << "Constructeur par default" << std::endl;
 }
 
 Zombie::~Zombie()
