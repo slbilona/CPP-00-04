@@ -18,24 +18,32 @@ void  PhoneBook::erreurDeSaisie(const std::string& str, int i)
 
 void PhoneBook::add(int i, PhoneBook& repertoire)
 {
-	Contact contact;
-	std::cout << "Quel est le PRENOM du contact ?\n";
-	while(!(std::cin >> contact.Prenom))
-		erreurDeSaisie("Quel est le NUMERO du contact ?", 0);
-	std::cout << "Quel est le NOM du contact ?\n";
-	while(!(std::cin >> contact.NomDeFamille))
-		erreurDeSaisie("Quel est le NOM du contact ?", 0);
-	std::cout << "Quel est le SURNOM du contact ?\n";
-	while(!(std::cin >> contact.Surnom))
-		erreurDeSaisie("Quel est le SURNOM du contact ?", 0);
-	std::cout << "Quel est le NUMERO du contact ?\n";
-	while(!(std::cin >> contact.NumeroDeTelephone))
-		erreurDeSaisie("Quel est le NUMERO du contact ?", 1);
-	std::cout << "Quel est le PLUS LOURD SECRET du contact ?\n";
-	while(!(std::cin >> contact.PlusLourdSecret))
-		erreurDeSaisie("Quel est le PLUS LOURD SECRET du contact ?", 0);
-	repertoire.contacts[i] = contact;
+    Contact contact;
+
+    // Saisie du prénom
+    std::cout << "Quel est le PRENOM du contact ?\n";
+    std::getline(std::cin, contact.Prenom);
+
+    // Saisie du nom de famille
+    std::cout << "Quel est le NOM du contact ?\n";
+    std::getline(std::cin, contact.NomDeFamille);
+
+    // Saisie du surnom
+    std::cout << "Quel est le SURNOM du contact ?\n";
+    std::getline(std::cin, contact.Surnom);
+
+    // Saisie du numéro de téléphone
+    std::cout << "Quel est le NUMERO du contact ?\n";
+    std::getline(std::cin, contact.NumeroDeTelephone);
+
+    // Saisie du plus lourd secret
+    std::cout << "Quel est le PLUS LOURD SECRET du contact ?\n";
+    std::getline(std::cin, contact.PlusLourdSecret);
+
+    // Ajout du contact au répertoire
+    repertoire.contacts[i] = contact;
 }
+
 
 void afficherNom(const char* str)
 {
